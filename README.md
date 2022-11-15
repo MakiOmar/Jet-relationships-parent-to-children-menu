@@ -9,6 +9,10 @@ This Code works with [Jet engine](https://crocoblock.com/plugins/jetengine/) rel
 - Created one to many relationship ( book contnet to book contnet ). Check `{child_child_rel_id}` in the code. 
 
 > **Note**
+> Make sure to change names like shortcode name or post type used within shortcode to yours. 
+
+
+> **Note**
 > This code works if each relationship has it's own table. [Documentation](https://crocoblock.com/knowledge-base/articles/jetengine-how-to-create-relationships-between-posts/)
 
 > **Warning**
