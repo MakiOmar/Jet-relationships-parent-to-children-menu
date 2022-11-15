@@ -11,5 +11,5 @@ This Code works with [Jet engine](https://crocoblock.com/plugins/jetengine/) rel
 > **Note**
 > This code works if each relationship has it's own table. [Documentation](https://crocoblock.com/knowledge-base/articles/jetengine-how-to-create-relationships-between-posts/)
 
-> **warning**
+> **Warning**
 > **If you are not using separate table**: Please make sure to set third parameter of function `anony_query_related_children` call to `true`
