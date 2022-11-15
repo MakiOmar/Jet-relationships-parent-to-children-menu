@@ -64,8 +64,10 @@ function anony_get_content_tree( $contents )
 	
 	foreach( $contents as $content )
 	{
-		
-		$content_to_contents = anony_query_related_children($content->child_object_id, 17, true);
+		//Please replace '{$parent_child_rel_id}' with the id of the parent to children relationship
+		$parent_child_rel_id = '{parent_child_rel_id}';
+
+		$content_to_contents = anony_query_related_children($content->child_object_id, $parent_child_rel_id, true);
 		if( !empty( $content_to_contents ) && is_array( $content_to_contents ) )
 		{
 			$title     = get_the_title( $content->child_object_id  );
@@ -124,8 +126,9 @@ add_shortcode( 'anony-book-contents', function(){
     if( !is_singular('book') ) return;
     global $post;
     
-    
-	$book_to_contents = anony_query_related_children($post->ID, 12, true);
+    //Please replace '{$child_child_rel_id}' with the id of the Child to children relationship
+    $child_child_rel_id = '{child_child_rel_id}';
+	$book_to_contents = anony_query_related_children($post->ID, $child_child_rel_id, true);
 
 	$output = '';
 	if( !empty( $book_to_contents ) && is_array( $book_to_contents ) )
